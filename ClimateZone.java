@@ -6,8 +6,8 @@ import java.util.Scanner;
 // ClimateZone is an object class blueprint
 // ClimateZone constructor
 public class ClimateZone {
-    public ClimateZone() {
 
+    public ClimateZone() {
     }
 
     public ClimateZone(String fileName) {
@@ -21,15 +21,11 @@ public class ClimateZone {
             while (scan.hasNextLine()) {
                 String data = scan.nextLine();
                 System.out.println(data);
-
             }
-
             scan.close();
         } catch (FileNotFoundException e) {
-        System.out.println("Una problema?\n");
-        e.printStackTrace();
+            System.out.println("Una problema?\n");
+            e.printStackTrace();
+        }
     }
-
-    }
-
 }
