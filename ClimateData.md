@@ -1,21 +1,10 @@
 15.6 Climate Data (Individual Assignment)
 Rules
-This is an Individual Assignment. You must complete this assignment on your own.
 
-Do not collaborate or share code with other students.
-Do not copy and paste code from anywhere.
-Especially from Chegg or Course Hero, or Stack Overflow, or from anywhere you found through a Google Search
-Students copying or sharing code will be reported to the Dean's office
-for violating the Academic Integrity Policy and for disciplinary action.
-Before you make a serious mistake and risk your grade and enrollment at ASU, please see your instructor for help.
-Do not use any resources outside of those provided in the course materials.
-Do not use any language features that have not been covered to this point in the course materials.
-Do not use any language features that are explicitly forbidden in these instructions.
-If you get stuck or need help, please use the help systems provided in this course.
-Copyright 2021 Arizona State University - This content is protected and may not be shared, uploaded, sold, or distributed in whole or part. Copying any part of these instructions or any part of a solution and sharing online or otherwise in any form is a violation of copyright laws and the ASU Academic Integrity Policy. All violations will be prosecuted.
+# Required Skills Inventory
 
-Required Skills Inventory
-Write a class to specifications
+## Write a class to specifications
+
 Declare a private instance variable in a Java class
 Initialize a private instance variable in a Java class
 Implement an attribute as a private instance variable in a Java class
