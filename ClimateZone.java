@@ -9,12 +9,10 @@ import java.util.ArrayList;
 public class ClimateZone {
 
     String dataString;
-    public ArrayList<ClimateZone> cityList = new ArrayList<ClimateZone>();
-
-    public ClimateZone() {
-    }
+    public ArrayList<ClimateZone> cityList;
 
     public ClimateZone(String fileName) {
+        cityList = new ArrayList<ClimateZone>();
         try {
             File dataFile = new File(fileName);
             FileReader nerd = new FileReader(dataFile);
@@ -31,6 +29,31 @@ public class ClimateZone {
             System.out.println("Una problema?\n");
             e.printStackTrace();
         }
+    }
+
+    public City addCity(String name, String state, double highTemp, double lowTemp) {
+        City.add(name);
+
+    }
+
+    public int getCityCount() {
+        return City.Count();
+    }
+
+    public City getCityByName() {
+
+    }
+
+    public void printHottestCities() {
+        System.out.println("HOT HOT HOT");
+    }
+
+    public void printColdestCitites() {
+        System.out.println("BURRRRRRRR");
+    }
+
+    public void printAllCities() {
+        System.out.println("all cities.");
     }
 
     public static void listAllCities(ClimateZone cityList) {

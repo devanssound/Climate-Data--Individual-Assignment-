@@ -109,19 +109,19 @@ In a file named ClimateZone.java, implement the class described below.
 
 The ClimateZone class must have the following private instance variables:
 
-a variable named cityList that will store a reference to an ArrayList<City>
+* a variable named cityList that will store a reference to an ArrayList<City>
 The ClimateZone class must have the following public constructor methods:
 
-a default constructor
+* a default constructor
 an overloaded constructor that takes one argument. This argument will be a String.
 The ClimateZone class must have the following public methods:
 
-a method named addCity. This method will take four arguments. The first argument will be a String (city name). The second argument will be a String (state name). The third (high temp.) and fourth (low temp.) arguments will be type double.
-a method named getCityCount. This method will take no arguments. This method will return an int.
-a method named getCityByName. This method will take two String arguments. This method will return a City reference.
-a method named printHottestCities. This method will take no arguments. This method will not return anything.
-a method named printColdestCities. This method will take no arguments. This method will not return anything.
-a method named printAllCities. This method will take no arguments. This method will not return anything.
+* a method named addCity. This method will take four arguments. The first argument will be a String (city name). The second argument will be a String (state name). The third (high temp.) and fourth (low temp.) arguments will be type double.
+* a method named getCityCount. This method will take no arguments. This method will return an int.
+* a method named getCityByName. This method will take two String arguments. This method will return a City reference.
+* a method named printHottestCities. This method will take no arguments. This method will not return anything.
+* a method named printColdestCities. This method will take no arguments. This method will not return anything.
+* a method named printAllCities. This method will take no arguments. This method will not return anything.
 Other Details
 
 The default constructor should instantiate a new ArrayList object, and store a reference to this object in the ClimateZone's cityList instance variable.
