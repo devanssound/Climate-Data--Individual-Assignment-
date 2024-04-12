@@ -67,7 +67,7 @@ The Main class has already been designed and written for this program. Carefully
 
 Your task is to implement the City and ClimateZone classes. The City class will allow us to instantiate City objects that will store the important information (name, state, high temp., low temp.) for a city. The ClimateZone class will allow us to create and manage a list of cities - we will use an ArrayList<City> to store the City objects.
 
-Part 1 - Implement the City Class
+# Part 1 - Implement the City Class
 
 In a file named City.java, implement the class described below.
 
@@ -89,7 +89,8 @@ a method named setHighTemp. This mutator method will take one double argument. T
 a method named getLowTemp. This accessor method will take no arguments. This method will return a double.
 a method named setLowTemp. This mutator method will take one double argument. This method will not return anything.
 a method named printInfo. This method will take no arguments. This method will not return anything.
-Other Details
+
+# Other Details
 
 The overloaded constructor should initialize the object's name, state, highTemp and lowTemp variables with the values passed in to the parameter variables.
 The getName accessor method should simply return the value stored in the object's name variable.
@@ -102,7 +103,7 @@ The printInfo method should print out to the console, the name, state, high temp
 Denver, Colorado (High = 31.00, Low = -6.00)
 Note that the temperature values always have 2 decimal places of precision.
 
-Part 2 - Implement the ClimateZone Class
+# Part 2 - Implement the ClimateZone Class
 
 In a file named ClimateZone.java, implement the class described below.
 

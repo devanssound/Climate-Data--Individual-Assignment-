@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class ClimateZone {
 
     String dataString;
-    public ArrayList<ClimateZone> zoneData = new ArrayList<ClimateZone>();
+    public ArrayList<ClimateZone> cityList = new ArrayList<ClimateZone>();
 
     public ClimateZone() {
     }
@@ -23,8 +23,8 @@ public class ClimateZone {
                 System.out.println("Absolute path: " + dataFile.getAbsolutePath());
             }
             while (scan.hasNextLine()) {
-                zoneData.add(scan.nextLine());
-                System.out.println(zoneData);
+                cityList.add(scan.nextLine());
+                System.out.println(cityList);
             }
             scan.close();
         } catch (FileNotFoundException e) {
@@ -33,10 +33,10 @@ public class ClimateZone {
         }
     }
 
-    public static void listAllCities(ClimateZone zoneData) {
+    public static void listAllCities(ClimateZone cityList) {
         int i = 0;
-        while (i < zoneData.size()) {
-            System.out.println(zoneData.get(i));
+        while (i < cityList.size()) {
+            System.out.println(cityList.get(i));
         }
     }
 }

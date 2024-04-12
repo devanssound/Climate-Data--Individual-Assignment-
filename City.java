@@ -21,11 +21,11 @@ public class City {
     }
 
     public double getHighTemp() {
-        return this.getHighTemp();
+        return this.highTemp;
     }
 
     public double getLowTemp() {
-        return this.getLowTemp();
+        return this.lowTemp;
     }
 
     public void setHighTemp(double arg) {
@@ -37,6 +37,7 @@ public class City {
     }
 
     public void printInfo() {
-        System.out.println("printInfo");
+        // Denver, Colorado (High = 31.00, Low = -6.00)
+        System.out.printf("%s , %s (High = %.2f, Low = %.2f)\n", name, state, highTemp, lowTemp);
     }
 }
