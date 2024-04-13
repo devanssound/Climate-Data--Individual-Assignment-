@@ -1,9 +1,10 @@
-15.6 Climate Data (Individual Assignment)
-Rules
+# README.md
 
-# Required Skills Inventory
+# 15.6 Climate Data (Individual Assignment)
 
-## Write a class to specifications
+## Required Skills Inventory
+
+### Write a class to specifications
 
 Declare a private instance variable in a Java class
 Initialize a private instance variable in a Java class

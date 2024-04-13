@@ -1,4 +1,4 @@
-/* City class */
+/* City.java */
 public class City {
     private String name = "";
     private String state = "";
@@ -6,10 +6,10 @@ public class City {
     private double lowTemp = 0.0;
 
     public City(String name, String state, double highTemp, double lowTemp) {
-        name = this.name;
-        state = this.state;
-        highTemp = this.highTemp;
-        lowTemp = this.lowTemp;
+        this.name = name;
+        this.state = state;
+        this.highTemp = highTemp;
+        this.lowTemp = lowTemp;
     }
 
     public String getName() {
@@ -38,6 +38,6 @@ public class City {
 
     public void printInfo() {
         // Denver, Colorado (High = 31.00, Low = -6.00)
-        System.out.printf("%s , %s (High = %.2f, Low = %.2f)\n", name, state, highTemp, lowTemp);
+        System.out.printf("%s, %s (High = %.2f, Low = %.2f)\n", name, state, highTemp, lowTemp);
     }
 }

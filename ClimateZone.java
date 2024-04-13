@@ -1,6 +1,5 @@
-/* ClimateZone class */
+/* ClimateZone.java */
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -8,58 +7,107 @@ import java.util.ArrayList;
 // ClimateZone constructor
 public class ClimateZone {
 
-    String dataString;
-    public ArrayList<ClimateZone> cityList;
+    private ArrayList<City> cityList;
+
+    public ClimateZone() {
+        this.cityList = new ArrayList<City>();
+    }
 
     public ClimateZone(String fileName) {
-        cityList = new ArrayList<ClimateZone>();
-        try {
-            File dataFile = new File(fileName);
-            FileReader nerd = new FileReader(dataFile);
-            Scanner scan = new Scanner(nerd);
-            if (dataFile.exists()) {
-                System.out.println("Absolute path: " + dataFile.getAbsolutePath());
-            }
+        this.cityList = new ArrayList<City>();
+        File dataFile = new File(fileName);
+        try (Scanner scan = new Scanner(dataFile)) {
             while (scan.hasNextLine()) {
-                cityList.add(scan.nextLine());
-                System.out.println(cityList);
+                String cityZone = scan.nextLine();
+                String[] data = cityZone.split("\\s");
+                String cityName = data[0];
+                String stateName = data[1];
+                double highTemp = Double.parseDouble(data[2]);
+                double lowTemp = Double.parseDouble(data[3]);
+
+                // Create a new City object
+                City newCity = new City(cityName, stateName, highTemp, lowTemp);
+                cityList.add(newCity);
             }
-            scan.close();
         } catch (FileNotFoundException e) {
-            System.out.println("Una problema?\n");
-            e.printStackTrace();
+            System.out.println("File not found: " + e.getMessage());
         }
     }
 
-    public City addCity(String name, String state, double highTemp, double lowTemp) {
-        City.add(name);
-
+    public void addCity(String name, String state, double highTemp, double lowTemp) {
+        // After creating a new city object, add that value into the Array List
+        City newCity = new City(name, state, highTemp, lowTemp);
+        cityList.add(newCity);
     }
 
     public int getCityCount() {
-        return City.Count();
+        // this method returns an int counting the number of cities in the ClimateZone ArrayList object
+        return this.cityList.size();
     }
 
-    public City getCityByName() {
-
+    public City getCityByName(String name, String state) {
+        for (City city : cityList) {
+            if (city.getName().equals(name) && city.getState().equals(state)) {
+                return city;
+            }
+        }
+        return null;
     }
 
     public void printHottestCities() {
-        System.out.println("HOT HOT HOT");
+        // We need to iterate through the cityList object, use .getHighTemp()
+        // Call printInfo method on Cit objects
+        double aHotTemp = 0.0;
+        double bHotTemp = 0.0;
+        City aHotCity = null;
+        City bHotCity = null;
+        for (City city : cityList) {
+            if (city.getHighTemp() > aHotTemp) {
+                bHotTemp = aHotTemp;
+                bHotCity = aHotCity;
+                aHotTemp = city.getHighTemp();
+                aHotCity = city;
+            } else if (city.getHighTemp() > bHotTemp) {
+                bHotTemp = city.getHighTemp();
+                bHotCity = city;
+            }
+        }
+        if (aHotCity != null)
+            aHotCity.printInfo();
+        if (bHotCity != null)
+            bHotCity.printInfo();
     }
 
-    public void printColdestCitites() {
-        System.out.println("BURRRRRRRR");
+    public void printColdestCities() {
+        double aColdTemp = Double.MAX_VALUE;
+        double bColdTemp = Double.MAX_VALUE;
+        City aColdCity = null;
+        City bColdCity = null;
+        for (City city : cityList) {
+            if (city.getLowTemp() < aColdTemp) {
+                bColdTemp = aColdTemp;
+                bColdCity = aColdCity;
+                aColdTemp = city.getLowTemp();
+                aColdCity = city;
+            } else if (city.getLowTemp() < bColdTemp) {
+                bColdTemp = city.getLowTemp();
+                bColdCity = city;
+            }
+        }
+        if (aColdCity != null)
+            aColdCity.printInfo();
+        if (bColdCity != null)
+            bColdCity.printInfo();
     }
 
     public void printAllCities() {
-        System.out.println("all cities.");
-    }
-
-    public static void listAllCities(ClimateZone cityList) {
-        int i = 0;
-        while (i < cityList.size()) {
-            System.out.println(cityList.get(i));
+        // this method will need to use .printInfo
+        if (cityList.isEmpty()) {
+            System.out.println("ity List object is empty.");
+        } else {
+            for (City city : cityList) {
+                city.printInfo();
+            }
         }
     }
 }
